@@ -48,7 +48,9 @@ wss.on("connection", (ws) => {
 
     if (msg.type === "msg") {
       if (!ws.name) {
-        ws.send(JSON.stringify({ type: "system", text: "you must join first" }));
+        ws.send(
+          JSON.stringify({ type: "system", text: "you must join first" })
+        );
         return;
       }
 
